@@ -15,9 +15,9 @@
         </div>
 
         <div class="vuefinder__about-modal__tab-content" v-if="selectedTab === TAB.ABOUT">
-          <div class="vuefinder__about-modal__description">{{ t('Vuefinder is a simple, lightweight, and fast file manager library for Vue.js applications') }}</div>
-          <a href="https://vuefinder.ozdemir.be" class="vuefinder__about-modal__link" target="_blank">{{ t('Project home') }}</a>
-          <a href="https://github.com/n1crack/vuefinder" class="vuefinder__about-modal__link" target="_blank">{{ t('Follow on GitHub') }}</a>
+          <div class="vuefinder__about-modal__description">{{ t('简单、轻量级和快速的文件管理器') }}</div>
+          <a href="https://xkloveme.github.io" class="vuefinder__about-modal__link" target="_blank">{{ t('Project home') }}</a>
+          <a href="https://github.com/xkloveme/finder" class="vuefinder__about-modal__link" target="_blank">{{ t('Follow on GitHub') }}</a>
         </div>
 
         <div class="vuefinder__about-modal__tab-content" v-if="selectedTab === TAB.SETTINGS">
@@ -172,7 +172,7 @@
           </div>
         </div>
 
-        <div class="vuefinder__about-modal__tab-content" v-if="selectedTab === TAB.ABOUT">
+        <div class="vuefinder__about-modal__tab-content" v-if="selectedTab === TAB.SETTINGS">
           <div class="vuefinder__about-modal__description">
             {{ t('Reset all settings to default') }}
           </div>

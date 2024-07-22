@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <div style="font-weight: bold;padding: 10px">Inline select button example</div>
-    <vue-finder
+    <!-- <vue-finder
       id='my_vuefinder'
       :request="request"
       :max-file-size="maxFileSize"
@@ -10,7 +10,7 @@
     />
 
     <br>
-    <br>
+    <br> -->
     <div style="font-weight: bold;padding: 10px">External select example</div>
     <vue-finder
       id='my_vuefinder2'

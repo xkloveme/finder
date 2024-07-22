@@ -203,6 +203,7 @@ function upload() {
  * Cancel upload
  */
 function cancel() {
+  uploading.value = false;
   uppy.cancelAll({ reason: 'user' });
   queue.value.forEach(entry => {
     if (entry.status !== QUEUE_ENTRY_STATUS.DONE) {
@@ -210,7 +211,6 @@ function cancel() {
       entry.statusName = t('Canceled');
     }
   });
-  uploading.value = false;
 }
 
 /**
@@ -446,6 +446,6 @@ onMounted(async () => {
 });
 
 onBeforeUnmount(() => {
-  uppy?.close({ reason: 'unmount' });
+  // uppy&&(uppy?.close({ reason: 'unmount' }));
 });
 </script>
