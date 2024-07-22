@@ -1,7 +1,7 @@
 <template>
   <ModalLayout>
     <div class="vuefinder__about-modal__content">
-      <ModalHeader :icon="AboutSVG" :title="'Vuefinder ' + app.version"></ModalHeader>
+      <ModalHeader :icon="AboutSVG" :title="'finder ' + app.version"></ModalHeader>
 
       <div class="vuefinder__about-modal__main">
         <div>
@@ -172,7 +172,7 @@
           </div>
         </div>
 
-        <div class="vuefinder__about-modal__tab-content" v-if="selectedTab === TAB.RESET">
+        <div class="vuefinder__about-modal__tab-content" v-if="selectedTab === TAB.ABOUT">
           <div class="vuefinder__about-modal__description">
             {{ t('Reset all settings to default') }}
           </div>
@@ -208,17 +208,15 @@ const TAB = {
   ABOUT: 'about',
   SETTINGS: 'settings',
   SHORTCUTS: 'shortcuts',
-  RESET: 'reset',
 };
 
 const tabs = computed(() => [
-  {name: t('About'), key: TAB.ABOUT},
-  {name: t('Settings'), key: TAB.SETTINGS},
   {name: t('Shortcuts'), key: TAB.SHORTCUTS},
-  {name: t('Reset'), key: TAB.RESET},
+  {name: t('Settings'), key: TAB.SETTINGS},
+  {name: t('About'), key: TAB.ABOUT},
 ]);
 
-const selectedTab = ref('about');
+const selectedTab = ref('shortcuts');
 
 
 const clearLocalStorage = async () => {
